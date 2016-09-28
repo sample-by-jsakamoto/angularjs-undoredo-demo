@@ -6,11 +6,11 @@ var AngularUndoRedoDemo;
         $routeProvider
             .when('/', {
             controller: 'homeController', controllerAs: 'ctrl',
-            templateUrl: '/views/home.html'
+            templateUrl: 'views/home.html'
         })
             .when('/edit', {
             controller: 'editorController', controllerAs: 'ctrl',
-            templateUrl: '/views/edit.html'
+            templateUrl: 'views/edit.html'
         });
     })
         .run(function (model, history) {
