@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS - Undo/Redo Demo</title>
+</head>
+<body ng-app="AngularUndoRedoDemo" ng-cloak>
+
+    <div ng-view>
+        <!-- view -->
+    </div>
+
+    <div ng-controller="appController as ctrl">
+        <pre>model.people = {{ctrl.model.people}}</pre>
+        <pre>history.index = {{ctrl.history.index}}</pre>
+        <pre>history.snapshots = {</pre>
+        <pre ng-repeat="snapshot in ctrl.history.snapshots">  {{$index}}: {{snapshot}}</pre>
+        <pre>}</pre>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="services/modelService.js"></script>
+    <script src="services/historyService.js"></script>
+    <script src="controllers/appController.js"></script>
+    <script src="controllers/homeController.js"></script>
+    <script src="controllers/editorController.js"></script>
+</body>
+</html>

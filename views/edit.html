@@ -1,0 +1,16 @@
+﻿<div name="editorForm" ng-form="form">
+    <label>Name</label>
+    <div>
+        <input type="text" required ng-model="ctrl.editing.name" />
+    </div>
+
+    <label>Age</label>
+    <div>
+        <input type="number" required ng-model="ctrl.editing.age" />
+    </div>
+
+    <div>
+        <button ng-click="ctrl.onClickOK()" ng-disabled="editorForm.$invalid">OK</button>
+        <button ng-click="ctrl.onClickCancel()">Cancel</button>
+    </div>
+</div>
