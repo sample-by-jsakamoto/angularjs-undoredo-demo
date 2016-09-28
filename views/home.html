@@ -1,12 +1,16 @@
 ﻿
 <label>Name</label>
-<div>{{ctrl.model.people.name}}</div>
+<div class="value">
+    {{ctrl.model.people.name}}
+</div>
 
 <label>Age</label>
-<div>{{ctrl.model.people.age}}</div>
+<div class="value">
+    {{ctrl.model.people.age}}
+</div>
 
-<div>
-    <button ng-click="ctrl.onClickEdit()">edit</button>
-    <button ng-click="ctrl.onClickUndo()" ng-disabled="!ctrl.history.canUndo">undo</button>
-    <button ng-click="ctrl.onClickRedo()" ng-disabled="!ctrl.history.canRedo">redo</button>
+<div class="actions">
+    <button ng-click="ctrl.onClickEdit()" class="material-icons">edit</button>
+    <button ng-click="ctrl.onClickUndo()" class="material-icons" ng-disabled="!ctrl.history.canUndo">undo</button>
+    <button ng-click="ctrl.onClickRedo()" class="material-icons" ng-disabled="!ctrl.history.canRedo">redo</button>
 </div>

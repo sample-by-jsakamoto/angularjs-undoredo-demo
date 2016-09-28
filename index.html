@@ -2,18 +2,25 @@
 <html>
 <head>
     <title>AngularJS - Undo/Redo Demo</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="content/site.min.css" rel="stylesheet" />
 </head>
 <body ng-app="AngularUndoRedoDemo" ng-cloak>
 
-    <div ng-view>
-        <!-- view -->
+    <div id="main-view">
+        <h1>AngularJS - Undo/Redo Demo</h1>
+        <div class="content" ng-view>
+            <!-- view -->
+        </div>
     </div>
 
-    <div ng-controller="appController as ctrl">
+    <div id="object-view" ng-controller="appController as ctrl">
         <pre>model.people = {{ctrl.model.people}}</pre>
         <pre>history.index = {{ctrl.history.index}}</pre>
         <pre>history.snapshots = {</pre>
-        <pre ng-repeat="snapshot in ctrl.history.snapshots">  {{$index}}: {{snapshot}}</pre>
+        <pre ng-repeat="snapshot in ctrl.history.snapshots" ng-class="{current:ctrl.history.index == $index}">  {{$index}}: {{snapshot}}</pre>
         <pre>}</pre>
     </div>
 
