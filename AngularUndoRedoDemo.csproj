@@ -52,6 +52,7 @@
     <Content Include="controllers\homeController.js.map">
       <DependentUpon>homeController.ts</DependentUpon>
     </Content>
+    <Content Include="favicon.ico" />
     <Content Include="index.html" />
     <Content Include="models\person.js">
       <DependentUpon>person.ts</DependentUpon>
@@ -115,6 +116,12 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="content\md-iconfont.scss" />
+    <Content Include="content\fonts\MaterialIcons-Regular.eot" />
+    <Content Include="content\fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="content\fonts\MaterialIcons-Regular.woff" />
+    <Content Include="content\fonts\MaterialIcons-Regular.woff2" />
+    <Content Include="README.md" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
