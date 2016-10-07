@@ -38,12 +38,12 @@ body {
     left: 0;
     right: 60%;
 
-    h1{
-        text-align:center;
-        background-color:#0094ff;
-        color:#fff;
-        padding:1rem;
-        font-size:120%;
+    h1 {
+        text-align: center;
+        background-color: #0094ff;
+        color: #fff;
+        padding: 1rem;
+        font-size: 120%;
     }
 
     .content {
@@ -85,8 +85,7 @@ body {
 
                 &[disabled] {
                     background-color: #ccc;
-                cursor: default;
-
+                    cursor: default;
                 }
             }
         }
@@ -111,6 +110,23 @@ body {
         &.current {
             background-color: #666;
         }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 85%;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 14px;
+    background-color: #444;
+    opacity: 0.5;
+
+    a {
+        color: #ccc;
     }
 }
 
